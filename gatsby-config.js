@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Fuji App`,
+    title: `經過Fuji培訓出來的企業夥伴包括有`,
   },
   plugins: [
     {
