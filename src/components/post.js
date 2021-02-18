@@ -1,6 +1,11 @@
 import React from "react"
 import postStyles from "./post.module.css"
 
-export default function Post({ children }) {
-  return <div className={postStyles.card}>{children}</div>
+export default function Post(props) {
+  return (
+    <div className={postStyles.card}>
+        <img src={props.image} alt={props.title} className={postStyles.image} />
+        {props.children}
+    </div>
+  )
 }

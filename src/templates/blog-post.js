@@ -4,11 +4,12 @@ import Layout from "../components/layout"
 import Post from "../components/post"
 
 export default function BlogPost({ data }) {
-  const post = data.markdownRemark
+  const node = data.markdownRemark
+  
   return (
     <Layout>
-      <Post>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Post image={node.frontmatter.image} title={node.frontmatter.title}>
+        <div dangerouslySetInnerHTML={{ __html: node.html }} />
       </Post>
     </Layout>
   )
@@ -20,6 +21,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        image
       }
     }
   }

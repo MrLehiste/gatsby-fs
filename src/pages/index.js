@@ -17,8 +17,7 @@ export default function Home({ data }) {
                 color: inherit;
               `}
             >
-              <Post>
-                <img src={node.frontmatter.image} alt={node.frontmatter.title} />
+              <Post image={node.frontmatter.image} title={node.frontmatter.title}>
                 <p>{node.excerpt}</p>
               </Post>
             </Link>
